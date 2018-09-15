@@ -11,8 +11,7 @@ def getStockDataVec(key):
 	lines = open("data/" + key + ".csv", "r").read().splitlines()
 
 	for line in lines[1:]:
-		vec.append(float(line.split(",")[4]))
-
+		vec.append(float(line.split(";")[0]))
 	return vec
 
 # returns the sigmoid
